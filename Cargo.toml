@@ -528,6 +528,15 @@ version = "0.1"
 [workspace.dependencies.ureq]
 version = "3"
 default-features = false
+features = ["rustls", "json"]
+
+[workspace.dependencies.rustls]
+version = "0.23"
+default-features = false
+features = ["std", "tls12", "aws_lc_rs"]
+
+[workspace.dependencies.aws-lc-rs]
+version = "1.13"
 
 [workspace.dependencies.zeroize]
 version = "1"
@@ -605,6 +614,8 @@ workspace = true
 [dependencies.self_update]
 version = "0.42"
 optional = true
+default-features = false
+features = ["rustls"]
 
 [dependencies.serde_json]
 workspace = true
